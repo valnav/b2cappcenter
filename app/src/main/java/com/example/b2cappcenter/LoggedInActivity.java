@@ -3,6 +3,8 @@ package com.example.b2cappcenter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.auth.Auth;
@@ -18,9 +20,8 @@ public class LoggedInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
         AppCenter.start(getApplication(), "25f17c16-d747-496d-bc24-33eab8846a9a",
-                Analytics.class, Crashes.class);
-        AppCenter.start(getApplication(), "25f17c16-d747-496d-bc24-33eab8846a9a",
-                Auth.class);
+                Analytics.class, Crashes.class, Auth.class);
+
         accountId = this.getIntent().getStringExtra(MainActivity.AccountId);
     }
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.ConsoleMessage;
 
 import com.microsoft.appcenter.AppCenter;
@@ -26,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppCenter.start(getApplication(), "25f17c16-d747-496d-bc24-33eab8846a9a",
-                Analytics.class, Crashes.class);
-        AppCenter.start(getApplication(), "25f17c16-d747-496d-bc24-33eab8846a9a",
-                Auth.class);
+                Analytics.class, Crashes.class, Auth.class);
+
+        AppCenter.setLogLevel(Log.VERBOSE);
 
     }
 
