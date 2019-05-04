@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">b2cappcenter</string>
+    <string name="welcome_to_app_center_auth">Welcome to App Center Auth!</string>
+    <string name="b2c_login">B2C Login</string>
+    <string name="hello">Hello!</string>
+    <string name="logout">Logout</string>
+</resources>
